@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShutdownTimer
+namespace ShutdownTimer2
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Presets.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Presets : Page
     {
-        public MainWindow()
+        public Presets()
         {
             InitializeComponent();
         }

@@ -1,0 +1,84 @@
+﻿<Page x:Class="ShutdownTimer2.CustomTime"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ShutdownTimer2"
+      mc:Ignorable="d"
+      Title="Custom Time" Height="384.667" Width="563.333"
+        >
+
+    <Grid  Margin="25,0,25,0">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <!--hours box-->
+        <TextBox Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
+				 VerticalAlignment="Center" AcceptsReturn="True" TextWrapping="Wrap" MaxWidth="400" materialDesign:HintAssist.Hint="Hours"
+				 IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextFieldBoxTextBoxEnabledComboBox}" 
+                 Background="{DynamicResource PrimaryHueLightBrush}"
+                 FontSize="20"
+                 />
+
+        <!--minutes box-->
+        <TextBox Grid.Row="1"  Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
+				 VerticalAlignment="Center" AcceptsReturn="True" TextWrapping="Wrap" MaxWidth="400" materialDesign:HintAssist.Hint="Minutes"
+				 IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextFieldBoxTextBoxEnabledComboBox}" 
+                 Background="{DynamicResource PrimaryHueLightBrush}"
+                 FontSize="20"
+                 />
+
+        <!--seconds box-->
+        <TextBox Grid.Row="2" Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
+				 VerticalAlignment="Center" AcceptsReturn="True" TextWrapping="Wrap" MaxWidth="400" materialDesign:HintAssist.Hint="Seconds"
+				 IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextFieldBoxTextBoxEnabledComboBox}" 
+                 Background="{DynamicResource PrimaryHueLightBrush}"
+                 FontSize="20"
+                 />
+
+        <Grid Grid.Row="3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="70*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--confirm button-->
+            <Button Grid.Row="3" Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                    Height="Auto"
+                    ToolTip="Resource name: MaterialDesignRaisedButton"
+                    Background="{DynamicResource PrimaryHueMidBrush}"
+                    Foreground="{DynamicResource SecondaryAccentBrush}"
+                    Margin="0,10,0,10"
+                    FontSize="20"
+                    >
+                Confirm
+            </Button>
+            <!--label-->
+            <TextBlock Grid.Column="2"
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="10,0,0,0"
+                       Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                       Foreground="{DynamicResource SecondaryAccentBrush}"
+                       FontSize="20"
+                       >
+                Save as preset
+            </TextBlock>
+
+            <!--checkbox-->
+            <CheckBox Grid.Column="1"
+                      Style="{StaticResource MaterialDesignActionCheckBox}"
+                      Background="{DynamicResource PrimaryHueMidBrush}"
+                      Foreground="{DynamicResource SecondaryAccentBrush}"
+                      HorizontalAlignment="Right"
+                      />
+        </Grid>
+    </Grid>
+</Page>

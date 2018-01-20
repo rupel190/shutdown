@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-16"?>
+<DevTrackerData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SolutionTotalEditTime="PT52M6.0338947S" SolutionTotalViewTime="PT8M34.5381412S" SolutionTotalDebugTime="PT33.5736185S">
+  <FileVersion>
+    <Major>1</Major>
+    <Minor>0</Minor>
+  </FileVersion>
+  <SessionTimeList />
+  <LastSessionTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT1.4894411S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\App.config</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:27:50.4496726+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT42.540365S" EditActiveTime="PT45.2458572S">
+      <ModifiedDate>2018-01-20T18:30:41.3641263+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\App.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:18:41.3798563+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT3M21.2667519S" EditActiveTime="PT25M16.4322562S">
+      <ModifiedDate>2018-01-20T19:11:10.3696768+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\CustomTime.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:15:31.259217+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT27.1121203S" EditActiveTime="PT3.0551432S">
+      <ModifiedDate>2018-01-20T18:20:13.7688728+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\CustomTime.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:19:28.1634506+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT33.5736185S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>Debug Mode</Item>
+      <ItemType>DebugModeItem</ItemType>
+      <ProjectName />
+      <CreatedDate>2018-01-20T17:19:59.690564+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M0.6704541S" EditActiveTime="PT17M40.5039993S">
+      <ModifiedDate>2018-01-20T18:38:25.1761804+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\MainWindow.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:18:27.0457465+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT25.8794662S" EditActiveTime="PT58.4386239S">
+      <ModifiedDate>2018-01-20T18:19:24.8849167+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\MainWindow.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:11:57.6212974+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT14.6606024S" EditActiveTime="PT3M9.8167478S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Presets.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:44:02.2739124+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M8.8732205S" EditActiveTime="PT4M12.5382581S">
+      <ModifiedDate>2018-01-20T18:36:15.553067+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\Presets.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:53:55.0234234+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT12.0487276S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\Presets.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:12:21.2275487+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+  </LastSessionTimeList>
+  <TotalTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT1.4894411S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\App.config</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:27:50.4496726+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT42.540365S" EditActiveTime="PT45.2458572S">
+      <ModifiedDate>2018-01-20T18:30:41.3641263+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\App.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:18:41.3798563+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT3M21.2662513S" EditActiveTime="PT25M16.4322562S">
+      <ModifiedDate>2018-01-20T19:11:10.3696768+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\CustomTime.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:15:31.259217+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT27.1121203S" EditActiveTime="PT3.0551432S">
+      <ModifiedDate>2018-01-20T18:20:13.7688728+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\CustomTime.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:19:28.1634506+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT33.5736185S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>Debug Mode</Item>
+      <ItemType>DebugModeItem</ItemType>
+      <ProjectName />
+      <CreatedDate>2018-01-20T17:19:59.690564+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M0.6704541S" EditActiveTime="PT17M40.5039993S">
+      <ModifiedDate>2018-01-20T18:38:25.1761804+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\MainWindow.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:18:27.0457465+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT25.8794662S" EditActiveTime="PT58.4386239S">
+      <ModifiedDate>2018-01-20T18:19:24.8849167+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\MainWindow.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:11:57.6212974+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT14.6606024S" EditActiveTime="PT3M9.8167478S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Presets.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:44:02.2739124+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M8.8732205S" EditActiveTime="PT4M12.5382581S">
+      <ModifiedDate>2018-01-20T18:36:15.553067+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\Presets.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:53:55.0234234+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT12.0487276S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\Presets.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:12:21.2275487+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+  </TotalTimeList>
+  <HistoryTimeList>
+    <DevTrackerDataItem ViewActiveTime="PT1.4894411S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\App.config</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:27:50.4496726+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT27.1121203S" EditActiveTime="PT3.0551432S">
+      <ModifiedDate>2018-01-20T18:20:13.7688728+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\CustomTime.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:19:28.1634506+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT3M21.2662513S" EditActiveTime="PT25M16.4322562S">
+      <ModifiedDate>2018-01-20T19:11:10.3696768+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\CustomTime.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:15:31.259217+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT12.0487276S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\Presets.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:12:21.2275487+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT25.8794662S" EditActiveTime="PT58.4386239S">
+      <ModifiedDate>2018-01-20T18:19:24.8849167+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\MainWindow.xaml.cs</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T18:11:57.6212974+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT1M8.8732205S" EditActiveTime="PT4M12.5382581S">
+      <ModifiedDate>2018-01-20T18:36:15.553067+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Pages\Presets.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:53:55.0234234+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT14.6606024S" EditActiveTime="PT3M9.8167478S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\Presets.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:44:02.2739124+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT33.5736185S" EditActiveTime="PT0S">
+      <ModifiedDate>0001-01-01T00:00:00</ModifiedDate>
+      <EditedCount>0</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>Debug Mode</Item>
+      <ItemType>DebugModeItem</ItemType>
+      <ProjectName />
+      <CreatedDate>2018-01-20T17:19:59.690564+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT42.540365S" EditActiveTime="PT45.2458572S">
+      <ModifiedDate>2018-01-20T18:30:41.3641263+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\App.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:18:41.3798563+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+    <DevTrackerDataItem ViewActiveTime="PT2M0.6704541S" EditActiveTime="PT17M40.5039993S">
+      <ModifiedDate>2018-01-20T18:38:25.1761804+01:00</ModifiedDate>
+      <ModifiedBy>Rupel</ModifiedBy>
+      <EditedCount>1</EditedCount>
+      <ViewedCount>1</ViewedCount>
+      <Item>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\MainWindow.xaml</Item>
+      <ItemType>ProjectItem</ItemType>
+      <ProjectName>C:\Users\Rupel\Dropbox\Private_Coding\C#\shutdown\ShutdownTimer2\ShutdownTimer2\ShutdownTimer2.csproj</ProjectName>
+      <CreatedDate>2018-01-20T17:18:27.0457465+01:00</CreatedDate>
+      <ViewedBy>Rupel</ViewedBy>
+    </DevTrackerDataItem>
+  </HistoryTimeList>
+</DevTrackerData>

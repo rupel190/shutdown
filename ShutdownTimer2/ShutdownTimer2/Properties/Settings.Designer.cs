@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShutdownTimer.Properties
+namespace ShutdownTimer2.Properties
 {
 
 
