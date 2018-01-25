@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutdownTimer2", "ShutdownTimer2\ShutdownTimer2.csproj", "{5EBE0A8E-26BF-45FE-898B-EA02E3E68F03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShutdownTimer", "ShutdownTimer2\ShutdownTimer.csproj", "{5EBE0A8E-26BF-45FE-898B-EA02E3E68F03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

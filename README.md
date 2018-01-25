@@ -9,6 +9,7 @@ This is achieved by employing a sophisticated algorithm used by companies as Mic
 
 
 Our goal is to provide users with the most comfortable solution for a timer-based shutdown inquiry. This is done by implementing an **extended** version of this algorithm paired with the **Material Design Guideline**<sup>2</sup>.
+Furthermore it is important to us, that users with bad eyesight have the best possible experience using the program. This is done by adopting an elaborate featureset commonly referred to as "zoom" and "unzoom".
 
 ## Design
 
@@ -41,7 +42,7 @@ Naturally the sequence diagram is rather coarse-grained, representing basic func
 
 
 
-Usage
+## Usage
 
 As soon as the minimal lovable version is released information on how to use it will appear *right here*! We're working hard on keeping this paragraph as short as possible in the future and appreciate your patience!
 
