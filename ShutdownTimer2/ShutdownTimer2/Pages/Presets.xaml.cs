@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShutdownLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,48 @@ namespace ShutdownTimer2
     /// </summary>
     public partial class Presets : Page
     {
+        ManageViaDiagnostics manager;
+
         public Presets()
         {
             InitializeComponent();
+            manager = new ManageViaDiagnostics();
+        }
+
+        private void btShutdown60min_Click(object sender, RoutedEventArgs e)
+        {
+            manager.Abort();
+            manager.Shutdown(0, 60, 0);
+        }
+
+        private void btShutdown90min_Click(object sender, RoutedEventArgs e)
+        {
+            manager.Abort();
+            manager.Shutdown(0, 90, 0);
+        }
+
+        private void btShutdown120min_Click(object sender, RoutedEventArgs e)
+        {
+            manager.Abort();
+            manager.Shutdown(0, 120,0);
+        }
+
+        private void btHibernate60min_Click(object sender, RoutedEventArgs e)
+        {
+            manager.Abort();
+            manager.Hibernate(0, 60, 0);
+        }
+
+        private void btHibernate90min_Click(object sender, RoutedEventArgs e)
+        {
+            manager.Abort();
+            manager.Hibernate(0, 90, 0);
+        }
+
+        private void btHibernate120min_Click(object sender, RoutedEventArgs e)
+        {
+            manager.Abort();
+            manager.Hibernate(0, 120, 0);
         }
     }
 }

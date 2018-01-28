@@ -31,17 +31,26 @@
                     <materialDesign:PackIcon Kind="Star" />
                 </Button>
                 <Button ToolTip="Custom Time" Click="CustomTime_Button_Click">
-                    <materialDesign:PackIcon Kind="Crosshairs" />
+                    <materialDesign:PackIcon Kind="FormatFloatLeft" />
                 </Button>
+                
+                <Separator />
+                <Button 
+                    ToolTip="Abort Shutdown" 
+                    Name="btAbortAll"
+                    Click="AbortAll_Button_Click">
+                    <materialDesign:PackIcon Kind="StopCircle" />
+                </Button>
+                
 
                 <Separator />
-
                 <Button ToolTip="Increase Zoom">
                     <materialDesign:PackIcon Kind="MagnifyPlus" />
                 </Button>
                 <Button ToolTip="Decrease Zoom">
                     <materialDesign:PackIcon Kind="MagnifyMinus" />
                 </Button>
+                
             </ToolBar>
         </ToolBarTray>
 

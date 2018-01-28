@@ -20,23 +20,40 @@
 
         <!--hours box-->
         <TextBox Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
-				 VerticalAlignment="Center" AcceptsReturn="True" TextWrapping="Wrap" MaxWidth="400" materialDesign:HintAssist.Hint="Hours"
+                 Name="tfHours"
+				 VerticalAlignment="Center"
+                 AcceptsReturn="True" 
+                 TextWrapping="Wrap"
+                 MaxWidth="400"
+                 materialDesign:HintAssist.Hint="Hours"
 				 IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextFieldBoxTextBoxEnabledComboBox}" 
                  Background="{DynamicResource PrimaryHueLightBrush}"
                  FontSize="20"
                  />
 
         <!--minutes box-->
-        <TextBox Grid.Row="1"  Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
-				 VerticalAlignment="Center" AcceptsReturn="True" TextWrapping="Wrap" MaxWidth="400" materialDesign:HintAssist.Hint="Minutes"
+        <TextBox Grid.Row="1" 
+                 Name="tfMinutes"
+                 Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
+				 VerticalAlignment="Center"
+                 AcceptsReturn="True"
+                 TextWrapping="Wrap"
+                 MaxWidth="400"
+                 materialDesign:HintAssist.Hint="Minutes"
 				 IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextFieldBoxTextBoxEnabledComboBox}" 
                  Background="{DynamicResource PrimaryHueLightBrush}"
                  FontSize="20"
                  />
 
         <!--seconds box-->
-        <TextBox Grid.Row="2" Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
-				 VerticalAlignment="Center" AcceptsReturn="True" TextWrapping="Wrap" MaxWidth="400" materialDesign:HintAssist.Hint="Seconds"
+        <TextBox Grid.Row="2" 
+                 Name="tfSeconds"
+                 Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
+				 VerticalAlignment="Center" 
+                 AcceptsReturn="True" 
+                 TextWrapping="Wrap" 
+                 MaxWidth="400" 
+                 materialDesign:HintAssist.Hint="Seconds"
 				 IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignTextFieldBoxTextBoxEnabledComboBox}" 
                  Background="{DynamicResource PrimaryHueLightBrush}"
                  FontSize="20"
@@ -48,18 +65,28 @@
                 <ColumnDefinition Width="20*"></ColumnDefinition>
                 <ColumnDefinition Width="70*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
             <!--confirm button-->
-            <Button Grid.Row="3" Style="{StaticResource MaterialDesignRaisedAccentButton}"
+            <Button Grid.RowSpan="2" 
+                    Name="btConfirm"
+                    Style="{StaticResource MaterialDesignRaisedAccentButton}"
                     Height="Auto"
                     ToolTip="Resource name: MaterialDesignRaisedButton"
                     Background="{DynamicResource PrimaryHueMidBrush}"
                     Foreground="{DynamicResource SecondaryAccentBrush}"
                     Margin="0,10,0,10"
-                    FontSize="20"
+                    FontSize="20" Click="btConfirm_Click"
                     >
                 Confirm
             </Button>
-            <!--label-->
+            
+            
+            <!--checkboxes, labels-->
+            
+            <!--label top-->
             <TextBlock Grid.Column="2"
                        TextWrapping="Wrap"
                        VerticalAlignment="Center"
@@ -69,16 +96,41 @@
                        Foreground="{DynamicResource SecondaryAccentBrush}"
                        FontSize="20"
                        >
-                Save as preset
+                Hibernate
             </TextBlock>
 
-            <!--checkbox-->
+            <!--checkbox top-->
             <CheckBox Grid.Column="1"
+                      Name="cb_Hibernate"
                       Style="{StaticResource MaterialDesignActionCheckBox}"
                       Background="{DynamicResource PrimaryHueMidBrush}"
                       Foreground="{DynamicResource SecondaryAccentBrush}"
                       HorizontalAlignment="Right"
                       />
+            <!--label bottom-->
+            <TextBlock Grid.Column="2"
+                       Grid.Row="1"
+                       TextWrapping="Wrap"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="10,0,0,0"
+                       Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+                       Foreground="{DynamicResource SecondaryAccentBrush}"
+                       FontSize="20"
+                       >
+                Save as Preset
+            </TextBlock>
+
+            <!--checkbox bottom-->
+            <CheckBox Grid.Column="1"
+                      Name="cb_SaveAsPreset"
+                      Grid.Row="1"
+                      Style="{StaticResource MaterialDesignActionCheckBox}"
+                      Background="{DynamicResource PrimaryHueMidBrush}"
+                      Foreground="{DynamicResource SecondaryAccentBrush}"
+                      HorizontalAlignment="Right"
+                      />
+
         </Grid>
     </Grid>
 </Page>
