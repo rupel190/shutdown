@@ -34,7 +34,7 @@ namespace ShutdownLogic.Managers
 
         public abstract void Shutdown(int hours, int minutes, int seconds);
 
-        public abstract void Hibernate(int hours, int minutes, int seconds);
+        public abstract void Sleep(int hours, int minutes, int seconds);
 
     }
 }

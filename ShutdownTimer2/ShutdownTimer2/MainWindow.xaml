@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShutdownTimer2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="495.5" Width="525"
-    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Sleepdown"
+        Name="myMainWindow"
+        Height="500"
+        Width="525"
+        WindowStartupLocation="Manual" Left="0" Top="40"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -14,52 +19,70 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
-    <Grid Background="{DynamicResource PrimaryHueDarkBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="239*"/>
-            <ColumnDefinition Width="278*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="400*"></RowDefinition>
-        </Grid.RowDefinitions>
+    
+    
+    <Grid Name="MainGrid"
+          Background="{DynamicResource PrimaryHueDarkBrush}"
+          SizeChanged="MainGrid_SizeChanged"
+          >
+        <Grid.LayoutTransform>
+            <ScaleTransform x:Name="ApplicationScaleTransform"
+                            CenterX="0"
+                            CenterY="0"
+                            ScaleX="{Binding ElementName=myMainWindow, Path=ScaleValue}"
+                            ScaleY="{Binding ElementName=myMainWindow, Path=ScaleValue}" />
+        </Grid.LayoutTransform>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="239*"/>
+                <ColumnDefinition Width="278*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="400*"></RowDefinition>
+            </Grid.RowDefinitions>
 
 
-        <ToolBarTray Grid.Row="0" Background="{DynamicResource SecondaryAccentBrush}" VerticalAlignment="Top" Grid.ColumnSpan="2" >
-            <ToolBar Background="{DynamicResource SecondaryAccentBrush}" Style="{DynamicResource MaterialDesignToolBar}" ClipToBounds="False">
-                <Button ToolTip="Presets" Click="Presets_Button_Click">
-                    <materialDesign:PackIcon Kind="Star" />
-                </Button>
-                <Button ToolTip="Custom Time" Click="CustomTime_Button_Click">
-                    <materialDesign:PackIcon Kind="FormatFloatLeft" />
-                </Button>
+            <ToolBarTray Grid.Row="0" Background="{DynamicResource SecondaryAccentBrush}" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+                <ToolBar Background="{DynamicResource SecondaryAccentBrush}" Style="{DynamicResource MaterialDesignToolBar}" ClipToBounds="False">
+                    <Button ToolTip="Presets" Click="Presets_Button_Click">
+                        <materialDesign:PackIcon Kind="Star" />
+                    </Button>
+                    <Button ToolTip="Custom Time" Click="CustomTime_Button_Click">
+                        <materialDesign:PackIcon Kind="FormatFloatLeft" />
+                    </Button>
                 
-                <Separator />
-                <Button 
-                    ToolTip="Abort Shutdown" 
-                    Name="btAbortAll"
-                    Click="AbortAll_Button_Click">
-                    <materialDesign:PackIcon Kind="StopCircle" />
-                </Button>
+                    <Separator />
+                    <Button 
+                        ToolTip="Abort Shutdown" 
+                        Name="btAbortAll"
+                        Click="AbortAll_Button_Click">
+                        <materialDesign:PackIcon Kind="StopCircle" />
+                    </Button>
                 
 
-                <Separator />
-                <Button ToolTip="Increase Zoom">
-                    <materialDesign:PackIcon Kind="MagnifyPlus" />
-                </Button>
-                <Button ToolTip="Decrease Zoom">
-                    <materialDesign:PackIcon Kind="MagnifyMinus" />
-                </Button>
+                    <Separator />
+                    <Button 
+                        Name="btnIncZoom"
+                        ToolTip="Increase Zoom" Click="btnIncZoom_Click">
+                        <materialDesign:PackIcon Kind="MagnifyPlus" />
+                    </Button>
+                    <Button 
+                        Name="btnDecZoom"
+                        ToolTip="Decrease Zoom" Click="btnDecZoom_Click">
+                        <materialDesign:PackIcon Kind="MagnifyMinus" />
+                    </Button>
                 
-            </ToolBar>
-        </ToolBarTray>
+                </ToolBar>
+            </ToolBarTray>
 
         
-        <!--<materialDesign:Card Grid.Row="1" Padding="32" Margin="16,16,16,0" Grid.ColumnSpan="2">
-            <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
-        </materialDesign:Card>-->
+            <!--<materialDesign:Card Grid.Row="1" Padding="32" Margin="16,16,16,0" Grid.ColumnSpan="2">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
+            </materialDesign:Card>-->
 
-        <Frame Grid.Row="1" Grid.ColumnSpan="2" x:Name="NavigationFrame" NavigationUIVisibility="Hidden" />
-        
+            <Frame Grid.Row="1" Grid.ColumnSpan="2" x:Name="NavigationFrame" NavigationUIVisibility="Hidden" />
+        </Grid>
     </Grid>
 </Window>

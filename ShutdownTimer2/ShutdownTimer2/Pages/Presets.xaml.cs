@@ -50,19 +50,19 @@ namespace ShutdownTimer2
         private void btHibernate60min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
-            manager.Hibernate(0, 60, 0);
+            manager.Sleep(0, 60, 0);
         }
 
         private void btHibernate90min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
-            manager.Hibernate(0, 90, 0);
+            manager.Sleep(0, 90, 0);
         }
 
         private void btHibernate120min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
-            manager.Hibernate(0, 120, 0);
+            manager.Sleep(0, 120, 0);
         }
     }
 }

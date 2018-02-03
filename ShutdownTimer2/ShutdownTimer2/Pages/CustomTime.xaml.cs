@@ -47,7 +47,7 @@ namespace ShutdownTimer2
             MessageBoxResult ds = MessageBoxResult.Yes;
             //Check if empty and change messageboxresult if required
             if(hours == 0 && minutes == 0 && seconds == 0) {
-                ds = MessageBox.Show("Instant shutdown ahead! Proceed?", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                ds = MessageBox.Show("Instant shutdown ahead! Proceed?", "Sleepdown: Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             }
             //Not zero or confirmed
             if(ds == MessageBoxResult.Yes){
@@ -59,7 +59,7 @@ namespace ShutdownTimer2
                 //Issue shutdown
                 if (cb_Hibernate.IsChecked.Value) {
                     manager.Abort();
-                    manager.Hibernate(hours, minutes, seconds);
+                    manager.Sleep(hours, minutes, seconds);
                 }
                 else {
                     manager.Shutdown(hours, minutes, seconds);
