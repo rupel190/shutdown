@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Managers\Manager.cs" />
     <Compile Include="Managers\ManageViaDiagnostics.cs" />
+    <Compile Include="Managers\ManageViaThreading.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,22 +1,51 @@
 ﻿using ShutdownLogic;
 using System;
+using System.Drawing;
 using System.Windows;
+using System.Windows.Forms;
 
-namespace ShutdownTimer2
+namespace ShutdownTimer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        System.Windows.Forms.NotifyIcon notifyIcon;
+        
         public MainWindow()
         {
             InitializeComponent();
             MinHeight = 500;
             MinWidth = 525;
-
             NavigationFrame.Navigate(new Presets());
+
+            //NotifyIcon
+            notifyIcon = new System.Windows.Forms.NotifyIcon();
+            notifyIcon.Icon = Properties.Resources.sleepdown;
+            notifyIcon.Visible = true;
+            notifyIcon.MouseClick += notifyIcon_Click;
+            StateChanged += WindowStateChanged;
         }
+
+        #region NotifyIcon
+        private void notifyIcon_Click(object sender, EventArgs e)
+        {
+            Show();
+            WindowState = WindowState.Normal;
+        }
+
+
+        private void WindowStateChanged(object sender, EventArgs e)
+        {
+            notifyIcon.BalloonTipTitle = "Sleepdown minimized to tray";
+            notifyIcon.BalloonTipText = "Don't close the program if a countdown is active!";
+            if(WindowState == WindowState.Minimized) {
+                notifyIcon.ShowBalloonTip(500);
+                Hide();
+            }
+        }
+        #endregion
 
         #region ScaleValue Dependency Property
         public static readonly DependencyProperty ScaleValueProperty =

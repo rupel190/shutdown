@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShutdownTimer2
+namespace ShutdownTimer
 {
     /// <summary>
     /// Interaction logic for CustomTime.xaml
