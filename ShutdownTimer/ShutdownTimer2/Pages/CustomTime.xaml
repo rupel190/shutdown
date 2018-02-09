@@ -118,7 +118,7 @@
                        Foreground="{DynamicResource SecondaryAccentBrush}"
                        FontSize="20"
                        >
-                Save as Preset
+                Turn off warnings
             </TextBlock>
 
             <!--checkbox bottom-->

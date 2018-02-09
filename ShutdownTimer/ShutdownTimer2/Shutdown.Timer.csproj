@@ -44,6 +44,7 @@
       <HintPath>..\packages\MaterialDesignThemes.2.3.1.953\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -85,6 +86,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\CustomTime.xaml.cs">
@@ -92,6 +97,9 @@
     </Compile>
     <Compile Include="Pages\Presets.xaml.cs">
       <DependentUpon>Presets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -120,9 +128,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ShutdownLogic\ShutdownLogic.csproj">
+    <ProjectReference Include="..\Shutdown.NotificationTray\Shutdown.NotificationTray.csproj">
+      <Project>{2067904B-E6F1-4456-8A1F-8FF6107FD1F5}</Project>
+      <Name>Shutdown.NotificationTray</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShutdownLogic\Shutdown.Logic.csproj">
       <Project>{E5DF21FF-2329-43F8-A05A-33F3BFB31211}</Project>
-      <Name>ShutdownLogic</Name>
+      <Name>Shutdown.Logic</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

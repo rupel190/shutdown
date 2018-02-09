@@ -1,6 +1,10 @@
-﻿using ShutdownLogic;
+﻿using Shutdown.NotificationTray;
+using ShutdownLogic;
 using ShutdownLogic.Managers;
+using ShutdownTimer.Pages;
 using System;
+using System.ComponentModel;
+using System.Configuration;
 using System.Drawing;
 using System.Windows;
 using System.Windows.Forms;
@@ -12,8 +16,8 @@ namespace ShutdownTimer
     /// </summary>
     public partial class MainWindow : Window
     {
-        NotifyIcon notifyIcon;
-        
+        Display notificationDisplay = Display.Instance;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -21,13 +25,22 @@ namespace ShutdownTimer
             MinWidth = 525;
             NavigationFrame.Navigate(new Presets());
 
-            //NotifyIcon
-            notifyIcon = new System.Windows.Forms.NotifyIcon();
-            notifyIcon.Icon = Properties.Resources.sleepdown;
-            
-            notifyIcon.MouseClick += notifyIcon_Click;
+            notificationDisplay.Notifycon.MouseClick += notifyIcon_Click;
             StateChanged += WindowStateChanged;
-            this.Closed += notifyIcon_OnClosing;
+            Closing += WindowClosing;
+            Closed += notifyIcon_OnClosing;
+        }
+
+        private void WindowClosing(object sender, CancelEventArgs e)
+        {
+            var appSettings = ConfigurationManager.AppSettings;
+
+            if(appSettings["CloseWarning"] == "true") {
+                e.Cancel = true;
+                var answer = System.Windows.MessageBox.Show("Running timers will terminate. Turn this warning off in the settings page.\n\nContinue?", "Exit", MessageBoxButton.YesNoCancel, MessageBoxImage.Warning);
+                if (answer == MessageBoxResult.Yes)
+                    e.Cancel = false;
+            }
         }
 
         #region NotifyIcon
@@ -40,15 +53,17 @@ namespace ShutdownTimer
 
         private void WindowStateChanged(object sender, EventArgs e)
         {
-            //Display notify icon in status bar + Info
-            notifyIcon.BalloonTipTitle = "Sleepdown minimized to tray";
-            notifyIcon.BalloonTipText = "Don't close the program if a countdown is active!";
-            if(WindowState == WindowState.Minimized) {
-                notifyIcon.Visible = true;
-                notifyIcon.ShowBalloonTip(500);
+            
+            //Display notify icon in status bar
+            if (WindowState == WindowState.Minimized) {
+                //notifycon.Show("Sleepdown minimized to tray", "Don't close the program if a countdown is active!");
+                notificationDisplay.Notifycon.BalloonTipTitle = "hahah";
+                notificationDisplay.Notifycon.BalloonTipText = "hfahsh";
+                notificationDisplay.Notifycon.Visible = true;
                 Hide();
-            } else {
-                notifyIcon.Visible = false;
+            }
+            else {
+                notificationDisplay.Notifycon.Visible = false;
                 Show();
             }
         }
@@ -60,9 +75,10 @@ namespace ShutdownTimer
             because the icon is only shown when minimized where there is no option to exit.
             This may change, also exiting through the taskmanager may happen without any problems now.
             */
-            notifyIcon.Visible = false;
+            Display.Instance.Notifycon.Visible = false;
         }
         #endregion
+
 
         #region ScaleValue Dependency Property - used for zoom on resize
         public static readonly DependencyProperty ScaleValueProperty =
@@ -186,5 +202,10 @@ namespace ShutdownTimer
         }
 
         #endregion
+
+        private void Settings_Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationFrame.Navigate(new Settings());
+        }
     }
 }

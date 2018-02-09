@@ -19,8 +19,8 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
-    
-    
+
+
     <Grid Name="MainGrid"
           Background="{DynamicResource PrimaryHueDarkBrush}"
           SizeChanged="MainGrid_SizeChanged"
@@ -44,40 +44,47 @@
             </Grid.RowDefinitions>
 
 
-            <ToolBarTray Grid.Row="0" Background="{DynamicResource SecondaryAccentBrush}" VerticalAlignment="Top" Grid.ColumnSpan="2" >
-                <ToolBar Background="{DynamicResource SecondaryAccentBrush}" Style="{DynamicResource MaterialDesignToolBar}" ClipToBounds="False">
-                    <Button ToolTip="Presets" Click="Presets_Button_Click">
-                        <materialDesign:PackIcon Kind="Star" />
-                    </Button>
-                    <Button ToolTip="Custom Time" Click="CustomTime_Button_Click">
-                        <materialDesign:PackIcon Kind="FormatFloatLeft" />
-                    </Button>
-                
-                    <Separator />
-                    <Button 
+                <ToolBarTray Grid.ColumnSpan="2" Grid.Row="0" Background="{DynamicResource SecondaryAccentBrush}" VerticalAlignment="Top" >
+                    <ToolBar Background="{DynamicResource SecondaryAccentBrush}" Style="{DynamicResource MaterialDesignToolBar}">
+                        <Button ToolTip="Presets" Click="Presets_Button_Click">
+                            <materialDesign:PackIcon Kind="Star" />
+                        </Button>
+                        <Button ToolTip="Custom Time" Click="CustomTime_Button_Click">
+                            <materialDesign:PackIcon Kind="FormatFloatLeft" />
+                        </Button>
+
+                        <Separator />
+                        <Button 
                         ToolTip="Abort Shutdown" 
                         Name="btAbortAll"
                         Click="AbortAll_Button_Click">
-                        <materialDesign:PackIcon Kind="StopCircle" />
-                    </Button>
-                
+                            <materialDesign:PackIcon Kind="StopCircle" />
+                        </Button>
 
-                    <Separator />
-                    <Button 
+
+                        <Separator />
+                        <Button 
                         Name="btnIncZoom"
                         ToolTip="Increase Zoom" Click="btnIncZoom_Click">
-                        <materialDesign:PackIcon Kind="MagnifyPlus" />
-                    </Button>
-                    <Button 
+                            <materialDesign:PackIcon Kind="MagnifyPlus" />
+                        </Button>
+                        <Button 
                         Name="btnDecZoom"
                         ToolTip="Decrease Zoom" Click="btnDecZoom_Click">
-                        <materialDesign:PackIcon Kind="MagnifyMinus" />
-                    </Button>
-                
-                </ToolBar>
-            </ToolBarTray>
+                            <materialDesign:PackIcon Kind="MagnifyMinus" />
+                        </Button>
+                    </ToolBar>
+                </ToolBarTray>
 
-        
+                <ToolBar Grid.ColumnSpan="2" HorizontalAlignment="Right" Background="{DynamicResource SecondaryAccentBrush}" Style="{DynamicResource MaterialDesignToolBar}">
+                    <Button ToolTip="Settings" Click="Settings_Button_Click">
+                        <materialDesign:PackIcon Kind="Settings" />
+                    </Button>
+                </ToolBar>
+
+            
+
+
             <!--<materialDesign:Card Grid.Row="1" Padding="32" Margin="16,16,16,0" Grid.ColumnSpan="2">
                 <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}">My First Material Design App</TextBlock>
             </materialDesign:Card>-->
