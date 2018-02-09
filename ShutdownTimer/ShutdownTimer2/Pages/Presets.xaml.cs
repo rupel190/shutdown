@@ -1,5 +1,6 @@
 ﻿using ShutdownLogic;
 using ShutdownLogic.Managers;
+using ShutdownTimer.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,40 +32,54 @@ namespace ShutdownTimer
             manager = ManageViaTasks.Instance;
         }
 
+        private void CheckForClose()
+        {
+            if(Settings.GetSetting("AutoMinimize") == "true") {
+                //HOLY CRISP IT WORKS!!!
+                MainWindow.GetWindow(this).WindowState = WindowState.Minimized;
+            }
+        }
+
         private void btShutdown60min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
             manager.Shutdown(0, 60, 0);
+            CheckForClose();
         }
 
         private void btShutdown90min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
             manager.Shutdown(0, 90, 0);
+            CheckForClose();
         }
 
         private void btShutdown120min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
             manager.Shutdown(0, 120,0);
+            CheckForClose();
         }
 
         private void btHibernate60min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
             manager.Sleep(0, 60, 0);
+            CheckForClose();
         }
 
         private void btHibernate90min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
             manager.Sleep(0, 90, 0);
+            CheckForClose();
         }
 
         private void btHibernate120min_Click(object sender, RoutedEventArgs e)
         {
             manager.Abort();
             manager.Sleep(0, 120, 0);
+            CheckForClose();
         }
     }
 }

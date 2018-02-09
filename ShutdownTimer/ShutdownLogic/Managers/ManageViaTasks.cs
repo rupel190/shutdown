@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Shutdown.NotificationTray;
+using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,7 +32,6 @@ namespace ShutdownLogic.Managers
     {
         CancellationTokenSource cts;                //Cancel shutdown/sleep
         ConsoleEx console = new ConsoleEx();        //Custom console output
-        NotifyIcon status = new NotifyIcon();       //Used for displaying status messages
 
         #region Singleton
         //http://csharpindepth.com/Articles/General/Singleton.aspx
@@ -43,12 +45,10 @@ namespace ShutdownLogic.Managers
         public static ManageViaTasks Instance { get { return lazy.Value; } }
         //private constructor to avoid instantiating
         private ManageViaTasks() {
-            status.BalloonTipText = "Info";
-            status.BalloonTipIcon = ToolTipIcon.Info;
-            status.Icon = Properties.Resources.sleepdown;      //doesn't work if this icon isn't set as well!
             
         }
         #endregion
+
 
         #region Overrides
         /// <summary>
@@ -60,11 +60,11 @@ namespace ShutdownLogic.Managers
             if(cts != null)
                 cts.Cancel();
 
-            status.BalloonTipText = "Shutdown/Sleep aborted";
+            Display.Instance.Notifycon.BalloonTipText = "Shutdown/Sleep aborted";
 
             if (withInfo) {
-                status.Visible = true;
-                status.ShowBalloonTip(2000); //timeout overridden by system accessibility
+                Display.Instance.Notifycon.Visible = true;
+                Display.Instance.Notifycon.ShowBalloonTip(2000); //timeout overridden by system accessibility
             }
         }
 
@@ -93,11 +93,7 @@ namespace ShutdownLogic.Managers
         private void StatusShow(int hours, int minutes, bool shutdown = true)
         {
             StringBuilder sb = new StringBuilder();
-            if(shutdown)
-                sb.Append("Shutdown in ");
-            else
-                sb.Append("Sleep in ");
-        
+            sb.Append("in ");        
             //View as minutes if less than 2 hours
             if (hours >= 2) {
                 sb.Append(hours);
@@ -110,10 +106,13 @@ namespace ShutdownLogic.Managers
             }
             sb.Append(" minutes");
             sb.Append("!");
-            status.BalloonTipText = sb.ToString();
 
-            status.Visible = true;
-            status.ShowBalloonTip(2000);
+            Display.Instance.Notifycon.BalloonTipText = sb.ToString();
+            if (shutdown)
+                Display.Instance.Show("Shutdown", sb.ToString());
+            else
+                Display.Instance.Show("Sleep", sb.ToString());
+
         }
 
 
