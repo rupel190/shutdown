@@ -87,7 +87,7 @@
             <!--checkboxes, labels-->
             
             <!--label top-->
-            <TextBlock Grid.Column="2"
+            <TextBlock Grid.Column="2" Grid.RowSpan="2"
                        TextWrapping="Wrap"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
@@ -100,7 +100,7 @@
             </TextBlock>
 
             <!--checkbox top-->
-            <CheckBox Grid.Column="1"
+            <CheckBox Grid.Column="1" Grid.RowSpan="2"
                       Name="cb_Hibernate"
                       Style="{StaticResource MaterialDesignActionCheckBox}"
                       Background="{DynamicResource PrimaryHueMidBrush}"
@@ -108,7 +108,7 @@
                       HorizontalAlignment="Right"
                       />
             <!--label bottom-->
-            <TextBlock Grid.Column="2"
+            <!--TextBlock Grid.Column="2"
                        Grid.Row="1"
                        TextWrapping="Wrap"
                        VerticalAlignment="Center"
@@ -118,10 +118,9 @@
                        Foreground="{DynamicResource SecondaryAccentBrush}"
                        FontSize="20"
                        >
-                Turn off warnings
-            </TextBlock>
+                Save as Preset
+            </>
 
-            <!--checkbox bottom-->
             <CheckBox Grid.Column="1"
                       Name="cb_SaveAsPreset"
                       Grid.Row="1"
@@ -129,8 +128,9 @@
                       Background="{DynamicResource PrimaryHueMidBrush}"
                       Foreground="{DynamicResource SecondaryAccentBrush}"
                       HorizontalAlignment="Right"
-                      />
-
+                      /
+                      -->
+                
         </Grid>
     </Grid>
 </Page>
