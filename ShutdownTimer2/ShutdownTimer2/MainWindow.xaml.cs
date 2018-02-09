@@ -1,4 +1,5 @@
 ﻿using ShutdownLogic;
+using ShutdownLogic.Managers;
 using System;
 using System.Drawing;
 using System.Windows;
@@ -11,7 +12,7 @@ namespace ShutdownTimer
     /// </summary>
     public partial class MainWindow : Window
     {
-        System.Windows.Forms.NotifyIcon notifyIcon;
+        NotifyIcon notifyIcon;
         
         public MainWindow()
         {
@@ -23,31 +24,47 @@ namespace ShutdownTimer
             //NotifyIcon
             notifyIcon = new System.Windows.Forms.NotifyIcon();
             notifyIcon.Icon = Properties.Resources.sleepdown;
-            notifyIcon.Visible = true;
+            
             notifyIcon.MouseClick += notifyIcon_Click;
             StateChanged += WindowStateChanged;
+            this.Closed += notifyIcon_OnClosing;
         }
 
         #region NotifyIcon
         private void notifyIcon_Click(object sender, EventArgs e)
         {
+            //Show program again on click
             Show();
             WindowState = WindowState.Normal;
         }
 
-
         private void WindowStateChanged(object sender, EventArgs e)
         {
+            //Display notify icon in status bar + Info
             notifyIcon.BalloonTipTitle = "Sleepdown minimized to tray";
             notifyIcon.BalloonTipText = "Don't close the program if a countdown is active!";
             if(WindowState == WindowState.Minimized) {
+                notifyIcon.Visible = true;
                 notifyIcon.ShowBalloonTip(500);
                 Hide();
+            } else {
+                notifyIcon.Visible = false;
+                Show();
             }
+        }
+
+        private void notifyIcon_OnClosing(object sender, EventArgs e)
+        {
+            /*
+            Remove icon when exiting program - this can only happen when the process is terminated
+            because the icon is only shown when minimized where there is no option to exit.
+            This may change, also exiting through the taskmanager may happen without any problems now.
+            */
+            notifyIcon.Visible = false;
         }
         #endregion
 
-        #region ScaleValue Dependency Property
+        #region ScaleValue Dependency Property - used for zoom on resize
         public static readonly DependencyProperty ScaleValueProperty =
             DependencyProperty.Register(
                 "ScaleValue",
@@ -119,12 +136,12 @@ namespace ShutdownTimer
         }
 
 
-    #region Buttons
+        #region Buttons
 
-    /// <summary>
-    /// navigates to presets menu
-    /// </summary>
-    private void Presets_Button_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// navigates to presets menu
+        /// </summary>
+        private void Presets_Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationFrame.Navigate(new Presets());
         }
@@ -142,8 +159,8 @@ namespace ShutdownTimer
         /// </summary>
         private void AbortAll_Button_Click(object sender, RoutedEventArgs e)
         {
-            ManageViaDiagnostics diaman = new ManageViaDiagnostics();
-            diaman.Abort();
+            Manager manager = ManageViaTasks.Instance;
+            manager.Abort(true);
         }
 
         /// <summary>

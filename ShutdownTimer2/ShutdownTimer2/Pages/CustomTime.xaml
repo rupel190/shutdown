@@ -22,7 +22,7 @@
         <TextBox Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
                  Name="tfHours"
 				 VerticalAlignment="Center"
-                 AcceptsReturn="True" 
+                 AcceptsReturn="False" 
                  TextWrapping="Wrap"
                  MaxWidth="400"
                  materialDesign:HintAssist.Hint="Hours"
@@ -36,7 +36,7 @@
                  Name="tfMinutes"
                  Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
 				 VerticalAlignment="Center"
-                 AcceptsReturn="True"
+                 AcceptsReturn="False"
                  TextWrapping="Wrap"
                  MaxWidth="400"
                  materialDesign:HintAssist.Hint="Minutes"
@@ -50,7 +50,7 @@
                  Name="tfSeconds"
                  Style="{StaticResource MaterialDesignTextFieldBoxTextBox}"
 				 VerticalAlignment="Center" 
-                 AcceptsReturn="True" 
+                 AcceptsReturn="False" 
                  TextWrapping="Wrap" 
                  MaxWidth="400" 
                  materialDesign:HintAssist.Hint="Seconds"
@@ -78,6 +78,7 @@
                     Foreground="{DynamicResource SecondaryAccentBrush}"
                     Margin="0,10,0,10"
                     FontSize="20" Click="btConfirm_Click"
+                    IsTabStop="True" TabIndex="0"
                     >
                 Confirm
             </Button>

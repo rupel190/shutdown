@@ -23,10 +23,9 @@ namespace ShutdownLogic.Managers
         }
 
         /// <summary>
-        /// Aborts the currently running shutdown process IF it's running.
-        /// Does nothing otherwise.
+        /// Aborts the currently running shutdown process IF it's running. Abstract implementation only works for the CMD shutdown command.
         /// </summary>
-        public virtual void Abort()
+        public virtual void Abort(bool withInfo = false)
         {
             //Should be possible to just abort the process itself, but it's easier to use the built-in function
             Process.Start("Shutdown", "/a");

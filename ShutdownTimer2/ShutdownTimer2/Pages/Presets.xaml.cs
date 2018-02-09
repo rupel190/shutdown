@@ -1,4 +1,5 @@
 ﻿using ShutdownLogic;
+using ShutdownLogic.Managers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,12 +22,13 @@ namespace ShutdownTimer
     /// </summary>
     public partial class Presets : Page
     {
-        ManageViaDiagnostics manager;
+        Manager manager;
 
         public Presets()
         {
             InitializeComponent();
-            manager = new ManageViaDiagnostics();
+            //manager = new ManageViaDiagnostics(); //replaced with (static) ManageViaThreading
+            manager = ManageViaTasks.Instance;
         }
 
         private void btShutdown60min_Click(object sender, RoutedEventArgs e)

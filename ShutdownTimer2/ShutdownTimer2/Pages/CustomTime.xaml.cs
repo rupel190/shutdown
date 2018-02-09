@@ -1,4 +1,5 @@
 ﻿using ShutdownLogic;
+using ShutdownLogic.Managers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,19 +24,49 @@ namespace ShutdownTimer
     {
         int hours = 0, minutes = 0, seconds = 0;
         readonly string errmsg = "Couldn't retrieve a value!";
+        Manager manager;
 
         public CustomTime()
         {
             InitializeComponent();
+            manager = ManageViaTasks.Instance;
+
+            //Pressing Enter confirms the inputs
+            tfHours.PreviewKeyDown += TfHours_PreviewKeyDown;
+            tfMinutes.PreviewKeyDown += TfMinutes_PreviewKeyDown;
+            tfSeconds.PreviewKeyDown += TfSeconds_PreviewKeyDown;
         }
+
+        #region Enter to confirm
+        private void TfHours_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter) {
+                btConfirm_Click(sender, e);
+            }
+        }
+
+        private void TfMinutes_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) {
+                btConfirm_Click(sender, e);
+            }
+        }
+
+        private void TfSeconds_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) {
+                btConfirm_Click(sender, e);
+            }
+        }
+
+        #endregion
 
         private void btConfirm_Click(object sender, RoutedEventArgs e)
         {
             //Parse values
-            ManageViaDiagnostics manager = new ManageViaDiagnostics();
             if(!string.IsNullOrEmpty(tfHours.Text))
                 if (!Int32.TryParse(tfHours.Text, out hours))
-                    MessageBox.Show(errmsg, "Minutes", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show(errmsg, "Hours", MessageBoxButton.OK, MessageBoxImage.Warning);
             if (!string.IsNullOrEmpty(tfMinutes.Text))
                 if (!Int32.TryParse(tfMinutes.Text, out minutes))
                     MessageBox.Show(errmsg, "Minutes", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -57,14 +88,10 @@ namespace ShutdownTimer
                 }
 
                 //Issue shutdown
-                if (cb_Hibernate.IsChecked.Value) {
-                    manager.Abort();
+                if (cb_Hibernate.IsChecked.Value)
                     manager.Sleep(hours, minutes, seconds);
-                }
-                else {
+                else
                     manager.Shutdown(hours, minutes, seconds);
-                    manager.Abort();
-                }
             } 
         }
     }
