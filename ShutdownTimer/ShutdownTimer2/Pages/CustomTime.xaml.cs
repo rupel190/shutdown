@@ -82,10 +82,6 @@ namespace ShutdownTimer
             }
             //Not zero or confirmed
             if(ds == MessageBoxResult.Yes){
-                //Save as preset
-                if(cb_SaveAsPreset.IsChecked.Value) {
-                    throw new NotImplementedException();
-                }
 
                 //Issue shutdown
                 if (cb_Hibernate.IsChecked.Value)

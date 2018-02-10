@@ -61,9 +61,9 @@
 
         <Grid Grid.Row="3" >
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="110*"></ColumnDefinition>
-                <ColumnDefinition Width="20*"></ColumnDefinition>
-                <ColumnDefinition Width="70*"></ColumnDefinition>
+                <ColumnDefinition Width="130*"></ColumnDefinition>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="35*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -87,7 +87,7 @@
             <!--checkboxes, labels-->
             
             <!--label top-->
-            <TextBlock Grid.Column="2"
+            <TextBlock Grid.Column="2" Grid.RowSpan="2"
                        TextWrapping="Wrap"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Left"
@@ -100,15 +100,16 @@
             </TextBlock>
 
             <!--checkbox top-->
-            <CheckBox Grid.Column="1"
+            <CheckBox Grid.Column="1" Grid.RowSpan="2"
                       Name="cb_Hibernate"
                       Style="{StaticResource MaterialDesignActionCheckBox}"
                       Background="{DynamicResource PrimaryHueMidBrush}"
                       Foreground="{DynamicResource SecondaryAccentBrush}"
                       HorizontalAlignment="Right"
+                      Margin="0,0,7,0"
                       />
             <!--label bottom-->
-            <TextBlock Grid.Column="2"
+            <!--TextBlock Grid.Column="2"
                        Grid.Row="1"
                        TextWrapping="Wrap"
                        VerticalAlignment="Center"
@@ -118,10 +119,9 @@
                        Foreground="{DynamicResource SecondaryAccentBrush}"
                        FontSize="20"
                        >
-                Turn off warnings
-            </TextBlock>
+                Save as Preset
+            </>
 
-            <!--checkbox bottom-->
             <CheckBox Grid.Column="1"
                       Name="cb_SaveAsPreset"
                       Grid.Row="1"
@@ -129,8 +129,9 @@
                       Background="{DynamicResource PrimaryHueMidBrush}"
                       Foreground="{DynamicResource SecondaryAccentBrush}"
                       HorizontalAlignment="Right"
-                      />
-
+                      /
+                      -->
+                
         </Grid>
     </Grid>
 </Page>
