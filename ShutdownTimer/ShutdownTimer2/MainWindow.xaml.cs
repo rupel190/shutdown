@@ -22,7 +22,7 @@ namespace ShutdownTimer
         {
             InitializeComponent();
             MinHeight = 500;
-            MinWidth = 525;
+            MinWidth = 580;
             NavigationFrame.Navigate(new Presets());
 
             notificationDisplay.Notifycon.MouseClick += notifyIcon_Click;
@@ -139,6 +139,8 @@ namespace ShutdownTimer
         private void MainGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             Console.WriteLine("Mainwindow size changed");
+            //Console.WriteLine("Width: " + Width);
+            //Console.WriteLine("Height:" + Height);
             CalculateScale();
         }
 
