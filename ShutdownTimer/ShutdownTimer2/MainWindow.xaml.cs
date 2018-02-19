@@ -49,6 +49,7 @@ namespace ShutdownTimer
         private void notifyIcon_Click(object sender, EventArgs e)
         {
             //Show program again on click
+            Topmost = true;
             Show();
             WindowState = WindowState.Normal;
         }
@@ -61,7 +62,6 @@ namespace ShutdownTimer
             }
             else {
                 Display.Instance.Hide();
-                Topmost = true;
             }
         }
 
