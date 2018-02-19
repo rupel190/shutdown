@@ -60,11 +60,8 @@ namespace ShutdownLogic.Managers
             if(cts != null)
                 cts.Cancel();
 
-            Display.Instance.Notifycon.BalloonTipText = "Shutdown/Sleep aborted";
-
             if (withInfo) {
-                Display.Instance.Notifycon.Visible = true;
-                Display.Instance.Notifycon.ShowBalloonTip(2000); //timeout overridden by system accessibility
+                Display.Instance.Show("Warning", "Shutdown/Sleep aborted", ToolTipIcon.Warning);
             }
         }
 
@@ -85,7 +82,7 @@ namespace ShutdownLogic.Managers
         /// <param>Time is aggregated</param>
         public override void Sleep(int hours, int minutes, int seconds)
         {
-            StatusShow(hours, minutes);
+            StatusShow(hours, minutes, false);
             ShutdownSleep(hours, minutes, seconds, false);
         }
         #endregion
@@ -95,7 +92,7 @@ namespace ShutdownLogic.Managers
             StringBuilder sb = new StringBuilder();
             sb.Append("in ");        
             //View as minutes if less than 2 hours
-            if (hours >= 2) {
+            if ((hours*60)+minutes > 120) {
                 sb.Append(hours);
                 sb.Append(" hours");
                 sb.Append(", ");
@@ -107,12 +104,11 @@ namespace ShutdownLogic.Managers
             sb.Append(" minutes");
             sb.Append("!");
 
-            Display.Instance.Notifycon.BalloonTipText = sb.ToString();
+
             if (shutdown)
                 Display.Instance.Show("Shutdown", sb.ToString());
             else
                 Display.Instance.Show("Sleep", sb.ToString());
-
         }
 
 
