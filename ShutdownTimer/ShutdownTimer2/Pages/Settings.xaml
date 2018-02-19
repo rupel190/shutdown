@@ -24,6 +24,7 @@
             <ColumnDefinition Width="70*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
+
         <!--display warnings-->
         <TextBlock Grid.Column="0"
                        Grid.Row="0"

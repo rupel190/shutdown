@@ -17,6 +17,8 @@ namespace ShutdownTimer
     public partial class MainWindow : Window
     {
         Display notificationDisplay = Display.Instance;
+        readonly int rescaleFactorWidth = 150;
+        readonly int rescaleFactorHeight = 100;
 
         public MainWindow()
         {
@@ -25,7 +27,7 @@ namespace ShutdownTimer
             MinWidth = 580;
             NavigationFrame.Navigate(new Presets());
 
-            notificationDisplay.Notifycon.MouseClick += notifyIcon_Click;
+            notificationDisplay.MouseClickSubscriber(notifyIcon_Click);
             StateChanged += WindowStateChanged;
             Closing += WindowClosing;
             Closed += notifyIcon_OnClosing;
@@ -53,18 +55,13 @@ namespace ShutdownTimer
 
         private void WindowStateChanged(object sender, EventArgs e)
         {
-            
             //Display notify icon in status bar
             if (WindowState == WindowState.Minimized) {
-                //notifycon.Show("Sleepdown minimized to tray", "Don't close the program if a countdown is active!");
-                notificationDisplay.Notifycon.BalloonTipTitle = "hahah";
-                notificationDisplay.Notifycon.BalloonTipText = "hfahsh";
-                notificationDisplay.Notifycon.Visible = true;
-                Hide();
+                Display.Instance.Show("Minimized", "Sleepdown minimized to tray\nDon't close the program when a countdown is active!");
             }
             else {
-                notificationDisplay.Notifycon.Visible = false;
-                Show();
+                Display.Instance.Hide();
+                Topmost = true;
             }
         }
 
@@ -75,7 +72,7 @@ namespace ShutdownTimer
             because the icon is only shown when minimized where there is no option to exit.
             This may change, also exiting through the taskmanager may happen without any problems now.
             */
-            Display.Instance.Notifycon.Visible = false;
+            Display.Instance.Hide();
         }
         #endregion
 
@@ -186,8 +183,8 @@ namespace ShutdownTimer
         /// </summary>
         private void btnIncZoom_Click(object sender, RoutedEventArgs e)
         {
-            myMainWindow.Height += 100;
-            myMainWindow.Width += 150;
+            myMainWindow.Height += rescaleFactorHeight;
+            myMainWindow.Width += rescaleFactorWidth;
         }
 
         /// <summary>
@@ -197,10 +194,15 @@ namespace ShutdownTimer
         /// <param name="e"></param>
         private void btnDecZoom_Click(object sender, RoutedEventArgs e)
         {
-            if(myMainWindow.Height-100 > myMainWindow.MinHeight)
-                myMainWindow.Height -= 100;
-            if(myMainWindow.Width- 150 > myMainWindow.MinWidth)
-                myMainWindow.Width -= 150;
+            if (myMainWindow.Height - rescaleFactorHeight > myMainWindow.MinHeight)
+                myMainWindow.Height -= rescaleFactorHeight;
+            else
+                myMainWindow.Height = MinHeight;
+
+            if (myMainWindow.Width - rescaleFactorWidth > myMainWindow.MinWidth)
+                myMainWindow.Width -= rescaleFactorWidth;
+            else
+                myMainWindow.Width = MinWidth;
         }
 
         #endregion

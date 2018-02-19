@@ -11,7 +11,7 @@ namespace Shutdown.NotificationTray
     {
         private NotifyIcon notifycon; //Used for displaying status messages
 
-        public NotifyIcon Notifycon {
+        private NotifyIcon Notifycon {
             get { return notifycon; }
             set { notifycon = value; }
         }
@@ -27,6 +27,7 @@ namespace Shutdown.NotificationTray
 
         public void Show(string balloonTipTitle, string balloonTipText, ToolTipIcon iconType=ToolTipIcon.Info)
         {
+            Hide();
             //Text/Info for the icon
             notifycon.BalloonTipTitle = balloonTipTitle;
             notifycon.BalloonTipText = balloonTipText;
@@ -38,6 +39,11 @@ namespace Shutdown.NotificationTray
         public void Hide()
         {
             notifycon.Visible = false;
+        }
+
+        public void MouseClickSubscriber(MouseEventHandler sub)
+        {
+            notifycon.MouseClick += sub;
         }
         
     }
