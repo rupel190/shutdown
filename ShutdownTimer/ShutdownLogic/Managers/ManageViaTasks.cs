@@ -123,7 +123,7 @@ namespace ShutdownLogic.Managers
             token = cts.Token;
             token.Register(() => Abort());
 
-            AsyncWait(token, dueTime);      
+            AsyncWait(token, dueTime, shutdown);
         }
 
         private async void AsyncWait(CancellationToken token, int dueTime, bool shutdown = true)
